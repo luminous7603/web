@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+    <HEAD>
+        <TITLE> Harry Potter </TITLE>
+        <META NAME="Generator" CONTENT="EditPlus">
+        <META NAME="Author" CONTENT="">
+        <META NAME="Keywords" CONTENT="">
+        <META NAME="Description" CONTENT="">
+
+        <SCRIPT LANGUAGE="JavaScript">
+        //Background changer
+        var speed = 3000;
+            
+        var Pic = new Array(); // don't touch this
+        Pic[0] = '1.jpg';
+        Pic[1] = '2.jpg';
+        Pic[2] = '3.jpg';
+            
+        var t;
+        var j = 0;
+        var p = Pic.length;
+
+        var preLoad = new Array();
+
+        for (i = 0; i < p; i++){
+            preLoad[i] = new Image();
+            preLoad[i].src = Pic[i];
+        }
+
+        function runBGSlideShow(){
+            if (document.body){
+                document.body.background = Pic[j];
+                j = j + 1;
+                if (j > (p-1)) {j=0;}
+                t = setTimeout('runBGSlideShow()', speed);
+            }
+        }
+        </script>
+    </HEAD>
+
+    <BODY onload="runBGSlideShow()">
+        <style>
+        body{
+            background-repeat: no-repeat;
+            background-position: 0 0; }
+
+            /*menu font attributes */
+            .menu a{color:#F2F2F2; text-decoration:none; font-family:GEORGIA; font-size:11pt;}
+        </style>
+
+        <!-- This part is Head Section  -->
+        <div style="width: 100%; text-align:center;">
+            <a href="Harry potter.html"><img src="http://jinnecom.dothome.co.kr/20165/harrypotter/harrylogo.png" style="width: 100%; max-width: 300px; vertical-align: middle" /></a>
+            <a href="team_profile.html"><img src='Phoenix.png' width=160 height=100 style="position: absolute; left:10px;"></a>
+            <input type='image' src='seoultech.png' width=100 height=100 style="position: absolute; right:1px;">
+        </div>
+
+        <!-- This part is Menu Section -->
+        <div class = "menu" style="width: 100%; text-align:center; margin-top: 25px;">
+            <a href="www.naver.com" >EXPLORE THE STORY&nbsp &nbsp &nbsp &nbsp &nbsp</a>
+            <a href="www.naver.com" >FANTASTIC BEASTS&nbsp &nbsp &nbsp &nbsp &nbsp</a>
+            <a href="www.naver.com" >ATTRACTION&nbsp &nbsp &nbsp &nbsp &nbsp</a>
+            <a href="www.naver.com" >MAGIC SPELL&nbsp &nbsp &nbsp &nbsp &nbsp</a>
+            <a href="www.naver.com" >THE WIZARDING WORLD&nbsp &nbsp &nbsp &nbsp &nbsp</a>
+            <a href="www.naver.com" >BOOK INFORMATION</a>
+        </div>
+
+        <!-- aside indecator, changing background (maybe) -->
+        <div style="width: 100%; height:auto; position:fixed; top:50%;">
+            <a href=# id="prev"><img src="go_back.png" width="60" height="70"/></a>
+            <a href=# id="next"><img src="go_next.png" width="60" height="70" style="position:fixed; right:10px;" /></a>
+        </div>
+
+        <audio autoplay loop >
+                <source src="BGM.mp3" type="audio/mp3">
+        </audio>
+    </BODY>
+</HTML>
